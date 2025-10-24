@@ -1,6 +1,5 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import serverless from 'serverless-http';
 import connectDB from './config/db';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
@@ -30,9 +29,8 @@ app.use('/api/vapi', vapiWebhookRoute);
 // Serve generated audio files
 app.use('/audio', express.static('public'));
 
-// Optional: root route to check server
-app.get('/', (req, res) => {
-  res.send('AI Agent Backend is running!');
-});
+const PORT = process.env.PORT || 5000;
 
-export const handler = serverless(app);
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
