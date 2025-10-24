@@ -1,7 +1,7 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "start": "node dist/index.js",
@@ -28,8 +28,10 @@
     "multer": "^2.0.2",
     "node-fetch": "^3.3.2",
     "nodemailer": "^7.0.9",
+    "twilio": "^5.10.3",
     "uuid": "^9.0.0",
-    "xlsx": "^0.18.5"
+    "xlsx": "^0.18.5",
+    "axios": "^1.12.2"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
